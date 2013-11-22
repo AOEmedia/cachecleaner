@@ -42,7 +42,7 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 	 * Constructor
 	 */
 	public function __construct() {
-		parent::tx_lowlevel_cleaner_core();
+		parent::__construct();
 
 			// Load the extension configuration
 		$this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$this->extKey]);
