@@ -108,7 +108,7 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 			foreach ($this->cleanerConfiguration as $table => $tableConfiguration) {
 					// Perform operations only if table is selected or all tables are allowed
 				if (count($this->selectedTables) == 0 || in_array($table, $this->selectedTables)) {
-					$configurationOK = true;
+					$configurationOk = TRUE;
 					$field = '';
 					$dateLimit = '';
 					$where = '';
@@ -128,14 +128,14 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 
 						// No proper configuration field was found, skip this table
 					} else {
-						$configurationOK = false;
+						$configurationOk = FALSE;
 					}
 
 						// If the configuration is ok, perform the actual query and write down the results
 						// Also store the results for each table, so that no pointless DELETE is performed
 						// when the script is actually run
 					$message = '';
-					if ($configurationOK) {
+					if ($configurationOk) {
 						$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('COUNT(*) AS total', $table, $where);
 						$row = $GLOBALS['TYPO3_DB']->sql_fetch_row($res);
 						$message = sprintf($GLOBALS['LANG']->getLL('recordsToDelete'), $table, $row[0]);
@@ -184,7 +184,7 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 					if ($this->analysisResults[$table] == 0) {
 						$message =  sprintf($GLOBALS['LANG']->getLL('noRecordsToDelete'), $table);
 						if ($this->extConf['debug'] || TYPO3_DLOG) {
-							t3lib_div::devLog('(' . $table. ') ' . $GLOBALS['LANG']->getLL('noDeletedRecords'), $this->extKey, 0);
+							t3lib_div::devLog('(' . $table . ') ' . $GLOBALS['LANG']->getLL('noDeletedRecords'), $this->extKey, 0);
 						}
 						echo $message . chr(10);
 
@@ -194,7 +194,7 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 						if (($bypass = $this->cli_noExecutionCheck($table))) {
 							echo $bypass;
 						} else {
-							$configurationOK = true;
+							$configurationOk = TRUE;
 							$field = '';
 							$dateLimit = '';
 							$where = '';
@@ -214,13 +214,13 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 
 								// No proper configuration field was found, skip this table
 							} else {
-								$configurationOK = false;
+								$configurationOk = FALSE;
 							}
 
 								// If the configuration is ok, perform the actual query and write down the results
 							$message = '';
 							$severity = 0;
-							if ($configurationOK) {
+							if ($configurationOk) {
 								$res = $GLOBALS['TYPO3_DB']->exec_DELETEquery($table, $where);
 								$numDeletedRecords = $GLOBALS['TYPO3_DB']->sql_affected_rows($res);
 								$message =  sprintf($GLOBALS['LANG']->getLL('deletedRecords'), $numDeletedRecords);
@@ -237,7 +237,7 @@ class tx_cachecleaner_lowlevel extends tx_lowlevel_cleaner_core {
 								$severity = 2;
 							}
 							if ($this->extConf['debug'] || TYPO3_DLOG) {
-								t3lib_div::devLog('(' . $table. ') ' . $message, $this->extKey, $severity);
+								t3lib_div::devLog('(' . $table . ') ' . $message, $this->extKey, $severity);
 							}
 							echo $message . chr(10);
 						}
