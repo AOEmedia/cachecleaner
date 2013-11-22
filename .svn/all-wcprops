@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/TYPO3v4/Extensions/!svn/ver/27412/cachecleaner/trunk
+END
+ext_localconf.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/TYPO3v4/Extensions/!svn/ver/24003/cachecleaner/trunk/ext_localconf.php
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/TYPO3v4/Extensions/!svn/ver/27412/cachecleaner/trunk/ChangeLog
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/TYPO3v4/Extensions/!svn/ver/25067/cachecleaner/trunk/README.txt
+END
+class.tx_cachecleaner_lowlevel.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/TYPO3v4/Extensions/!svn/ver/27411/cachecleaner/trunk/class.tx_cachecleaner_lowlevel.php
+END
+locallang.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/TYPO3v4/Extensions/!svn/ver/27411/cachecleaner/trunk/locallang.xml
+END
+ext_icon.gif
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/TYPO3v4/Extensions/!svn/ver/23991/cachecleaner/trunk/ext_icon.gif
+END
+ext_emconf.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/TYPO3v4/Extensions/!svn/ver/27412/cachecleaner/trunk/ext_emconf.php
+END
+configuration_sample.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/TYPO3v4/Extensions/!svn/ver/24444/cachecleaner/trunk/configuration_sample.php
+END
+ext_autoload.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/TYPO3v4/Extensions/!svn/ver/24089/cachecleaner/trunk/ext_autoload.php
+END
+ext_conf_template.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/TYPO3v4/Extensions/!svn/ver/24107/cachecleaner/trunk/ext_conf_template.txt
+END
